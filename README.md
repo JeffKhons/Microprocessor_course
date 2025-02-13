@@ -22,7 +22,7 @@
 • 具有 5 個中斷來源，分別為 INT0 （外部中斷 0）、INT1 （外部中斷 1）、T0（計時器 0）、T1 （計時器 1）、RXD & TXD （UART）。  
 
 • 具有 1 組全雙工序列埠 UART（Universal Asynchronous Receiver Transmitter）。  
-![8051_block]<div align=center>(https://github.com/JeffKhons/Microprocessor_course/blob/main/img/8051_block_diagram.jpg)<div>  
+![8051_block]<div align=center>(https://github.com/JeffKhons/Microprocessor_course/blob/main/img/8051_block_diagram.jpg)    
 #### 8051 腳位  
 
 ![8051_io](https://github.com/JeffKhons/Microprocessor_course/blob/main/img/8051_IO_port.jpg)  
