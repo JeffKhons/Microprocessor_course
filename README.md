@@ -10,9 +10,15 @@
 ### 2. 8051 介紹
 #### 8051 內部元件
 • 8051 的運算核心為 8 位元的 CPU。  
-• 8051 內部有 4KB 的內部程式記憶體 ROM （read only memory，現多以 Flash memory 取代）和 128Bytes 的內部資料記憶體 RAM（read access memory），兩者最大皆可擴充至外部 64KB。  
+
+• 8051 內部有 4KB 的內部程式記憶體 ROM （read only memory，現多以 Flash memory 取代）和 128Bytes 的內部資料記憶體 RAM（read access memory），兩者最大皆可擴充至外部 64KB。 
+
 • 具有內部震盪電路，利用石英震盪晶體搭配兩個電容即可對 8051 提供時脈來源。  
+
 • 具有 4 組可位元定址的 GPIO （General-purpose input/output），分別為 P0、P1、P2、P3，其中 P0 腳位設計上主要做為位址或資料傳輸用，若要拿來提供訊號需要外接上拉電阻。  
+
 • 具有 2 組 16 位元的 timer，分別為 timer0 和 timer1。  
+
 • 具有 5 個中斷來源，分別為 INT0 （外部中斷 0）、INT1 （外部中斷 1）、T0（計時器 0）、T1 （計時器 1）、RXD & TXD （UART）。  
+
 • 具有 1 組全雙工序列埠 UART（Universal Asynchronous Receiver Transmitter）。  
