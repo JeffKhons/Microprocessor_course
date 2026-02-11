@@ -18,17 +18,17 @@ while(1){
 
 }
 void timer0_interrupt(void) interrupt 1{ // ‘iinterrupt 1 is vector of INT0
-	  if(P1==0x00){
+	if(P1==0x00){
     counter++;
-			  if(counter==Timer0_int_exe_time){
-				light*=2;
-				if(light==256)
-					light = 1;
-				P2 = 0xff - light ;
-				counter = 0;
-			}
-		}	
+		if(counter==Timer0_int_exe_time){
+			light*=2;
+			if(light==256) light = 1;
+			P2 = 0xff - light ;
+			counter = 0;
+		}
+	}	
 }
+
 
 
 
