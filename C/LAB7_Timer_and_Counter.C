@@ -32,18 +32,17 @@ void main( ){
 
 // 中斷向量說明
 // interrupt 0 是外部中斷 INT0
-// interrupt 1 是 Timer 0 溢位中斷 (這是我們要的)
+// interrupt 1 是 Timer 0 溢位中斷
 void timer0_interrupt(void) interrupt 1 { 
     
-    // [關鍵修正！！] Mode 1 必須在軟體內重新載入初值
-    // 如果不加這兩行，下次會從 0 開始數，時間會變慢且不準
+    // [修正！！] Mode 1 必須在軟體內重新載入初值
     TH0 = TH0_init;
     TL0 = TL0_init;
 
     // 檢查按鈕是否按下 (Active Low)
     // 只有當 P1.0 接地時，計數器才運作
     if(P1 == 0x01) { 
-    // 假設原本代碼 P1==0x00 是指 P1 所有的 pin 都是 0，通常我們只檢查特定 pin
+    // 假設原本 P1==0x00 是指 P1 所有的 pin 都是 0，通常我們只檢查特定 pin
     // 這裡保留你原本的邏輯 P1==0x00，但實務上建議用 if(P1_0 == 0)
     // 假設按鈕按下讓 P1 變成 0x00:
     // if(P1 == 0x00) { 
@@ -59,3 +58,4 @@ void timer0_interrupt(void) interrupt 1 {
     //} // end if P1
     }
 }
+
