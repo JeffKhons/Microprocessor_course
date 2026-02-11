@@ -5,6 +5,7 @@
 
 int counter = 0;
 int light = 1 ;
+
 void main( ){
 TMOD = 0x01; //set timer0 to mode 1(16-bits timer) and timer0 gate=1	
 IE = 0x82; //enable timer0 interrupt
@@ -13,9 +14,10 @@ P1 = 0x01;
 TL0 = TL0_init; TH0 = TH0_init; //set TH0 & TL0
 TCON = 0x10; 
 while(1){
-}  
 }
-void timer0_interrupt(void) interrupt 1{ // ‘iinterrupt 1 is vector of INT0
+
+}
+void timer0_interrupt(void) interrupt 1{ // â€˜iinterrupt 1 is vector of INT0
 	  if(P1==0x00){
     counter++;
 			  if(counter==Timer0_int_exe_time){
@@ -27,6 +29,7 @@ void timer0_interrupt(void) interrupt 1{ // ‘iinterrupt 1 is vector of INT0
 			}
 		}	
 }
+
 
 
 
