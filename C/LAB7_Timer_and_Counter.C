@@ -13,10 +13,12 @@ P2 = 0xfe;
 P1 = 0x01;
 TL0 = TL0_init; TH0 = TH0_init; //set TH0 & TL0
 TCON = 0x10; 
+
 while(1){
 }
 
 }
+
 void timer0_interrupt(void) interrupt 1{ // ‘iinterrupt 1 is vector of INT0
 	if(P1==0x00){
     counter++;
@@ -28,6 +30,7 @@ void timer0_interrupt(void) interrupt 1{ // ‘iinterrupt 1 is vector of INT0
 		}
 	}	
 }
+
 
 
 
